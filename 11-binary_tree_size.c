@@ -34,7 +34,7 @@ size_t binary_tree_size(const binary_tree_t *tree)
 	if (tree->left != NULL)
 		number = sub_count(tree->left, 1);
 	if (tree->right != NULL)
-		number = sub_count(tree->right, 1);
-
+		number += sub_count(tree->right, 1);
+	
 	return (number + 1);
 }
